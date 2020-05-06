@@ -11,7 +11,7 @@ const Chart = () => {
             setDailyData(await fetchDailyData());
         }
 
-        console.log(dailyData);
+        // console.log(dailyData);
 
         fetchAPI();
     },[]);
@@ -27,9 +27,10 @@ const Chart = () => {
                 label: 'Infected',
                 borderColor: '#3333ff',
                 fill:true,
-            },{
+            },
+            {
                 data:dailyData.map(({deaths}) => deaths),
-                label: 'Infected',
+                label: 'Deaths',
                 borderColor: 'red',
                 backgroundColor: 'rgba(255,0,0,0.5)',
                 fill:true,
@@ -40,7 +41,7 @@ const Chart = () => {
 
     return(
         <div className={styles.container}>
-
+            {lineChart}
         </div>
     )
 }
