@@ -14,3 +14,5 @@ run
 then
 `npm start`
 your React server will be hosted on localhost:3000
+
+you can check the love site here : "https://bit.ly/2TLofVx"
